@@ -107,7 +107,11 @@ def eliminar_servicio(request, pk):
         # redirect: regresa al listado, ya sin el registro borrado
         return redirect('servicios')
     # si es GET, solo muestra la pantalla de "¿Seguro?"; todavía no borra nada
-    return render(request, 'core/servicio_confirm_delete.html', {'servicio': servicio})
+    return render(
+    request,
+    'core/servicio_confirm_delete.html',
+    {'servicio': servicio}
+)
 
 
 # registro: la vista que atiende /registro/ (recibe la petición del navegador)
